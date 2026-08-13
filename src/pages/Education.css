@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   Background
+========================== */
+
+.education-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#2563eb,#3b82f6,#06b6d4);
+    padding:40px 20px;
+}
+
+/* ==========================
+   Main Card
+========================== */
+
+.education-card{
+    width:100%;
+    max-width:900px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    animation:fadeIn .8s ease;
+}
+
+.education-card h2{
+    color:#fff;
+    text-align:center;
+    font-size:34px;
+    font-weight:700;
+}
+
+.education-card p{
+    text-align:center;
+    color:#e2e8f0;
+    margin:10px 0 20px;
+}
+
+/* ==========================
+   Progress
+========================== */
+
+.progress{
+    height:10px;
+    border-radius:20px;
+    background:#dbeafe;
+}
+
+.progress-bar{
+    border-radius:20px;
+}
+
+/* ==========================
+   Input
+========================== */
+
+.input-box{
+    position:relative;
+    margin-bottom:18px;
+}
+
+.input-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    padding:14px 18px 14px 48px;
+    background:white;
+    font-size:15px;
+}
+
+.input-icon{
+    position:absolute;
+    left:16px;
+    top:16px;
+    color:#2563eb;
+    font-size:18px;
+}
+
+/* ==========================
+   Add Button
+========================== */
+
+.add-btn{
+    width:100%;
+    background:#198754;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+    margin-top:5px;
+}
+
+.add-btn:hover{
+    background:#157347;
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   Education Card
+========================== */
+
+.education-item{
+    background:white;
+    border-left:6px solid #2563eb;
+    border-radius:15px;
+    padding:20px;
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.education-item:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 30px rgba(0,0,0,.15);
+}
+
+.education-item h4{
+    color:#2563eb;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.education-item p{
+    text-align:left;
+    color:#555;
+    margin:2px 0;
+}
+
+.education-item small{
+    color:#777;
+}
+
+/* ==========================
+   Action Buttons
+========================== */
+
+.edit-btn,
+.delete-btn{
+    border:none;
+    color:white;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    margin-left:10px;
+    transition:.3s;
+}
+
+.edit-btn{
+    background:#0d6efd;
+}
+
+.delete-btn{
+    background:#dc3545;
+}
+
+.edit-btn:hover{
+    background:#0b5ed7;
+    transform:scale(1.1);
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+    transform:scale(1.1);
+}
+
+/* ==========================
+   Empty State
+========================== */
+
+.empty-box{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    margin-top:20px;
+}
+
+.empty-box h4{
+    color:#64748b;
+}
+
+/* ==========================
+   Bottom Buttons
+========================== */
+
+.button-group{
+    display:flex;
+    gap:15px;
+    margin-top:30px;
+}
+
+.back-btn,
+.next-btn{
+    flex:1;
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn{
+    background:#6b7280;
+}
+
+.next-btn{
+    background:#f59e0b;
+}
+
+.back-btn:hover{
+    background:#4b5563;
+}
+
+.next-btn:hover{
+    background:#d97706;
+}
+
+.back-btn:hover,
+.next-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   Animation
+========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:768px){
+
+.education-card{
+    padding:25px;
+}
+
+.education-card h2{
+    font-size:28px;
+}
+
+.education-item{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.button-group{
+    flex-direction:column;
+}
+
+.edit-btn,
+.delete-btn{
+    margin-left:0;
+    margin-right:10px;
+}
+
+}

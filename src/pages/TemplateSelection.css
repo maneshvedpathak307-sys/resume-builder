@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   Background
+========================== */
+
+.template-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#2563eb,#3b82f6,#06b6d4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+/* ==========================
+   Container
+========================== */
+
+.template-container{
+    width:100%;
+    max-width:1450px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    animation:fadeIn .8s ease;
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.template-title{
+    font-size:40px;
+    font-weight:700;
+    color:white;
+}
+
+.template-subtitle{
+    color:#e2e8f0;
+    font-size:17px;
+    margin-top:10px;
+}
+
+/* ==========================
+   Progress
+========================== */
+
+.progress{
+    height:12px;
+    border-radius:20px;
+    overflow:hidden;
+    background:#dbeafe;
+}
+
+.progress-bar{
+    font-weight:600;
+}
+
+/* ==========================
+   Template Card
+========================== */
+
+.template-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.35s;
+    position:relative;
+    height:100%;
+}
+
+.template-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 40px rgba(0,0,0,.25);
+}
+
+/* ==========================
+   Image
+========================== */
+
+.template-image{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    transition:.35s;
+}
+
+.template-card:hover .template-image{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   Body
+========================== */
+
+.template-body{
+    padding:22px;
+    text-align:center;
+}
+
+.template-body h4{
+    color:#2563eb;
+    font-weight:700;
+}
+
+.template-body p{
+    color:#666;
+    margin:15px 0;
+    min-height:65px;
+}
+
+/* ==========================
+   Rating
+========================== */
+
+.rating{
+    color:#f59e0b;
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* ==========================
+   Tags
+========================== */
+
+.template-tags{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.template-tags span{
+    background:#e0edff;
+    color:#2563eb;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ==========================
+   Badges
+========================== */
+
+.badge-modern,
+.badge-professional,
+.badge-creative,
+.badge-minimal{
+    position:absolute;
+    top:15px;
+    left:15px;
+    color:white;
+    padding:7px 15px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.badge-modern{
+    background:#2563eb;
+}
+
+.badge-professional{
+    background:#198754;
+}
+
+.badge-creative{
+    background:#f59e0b;
+}
+
+.badge-minimal{
+    background:#212529;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.modern-btn,
+.professional-btn,
+.creative-btn,
+.minimal-btn{
+    width:100%;
+    color:white;
+    border:none;
+    padding:13px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.modern-btn{
+    background:#2563eb;
+}
+
+.professional-btn{
+    background:#198754;
+}
+
+.creative-btn{
+    background:#f59e0b;
+}
+
+.minimal-btn{
+    background:#212529;
+}
+
+.modern-btn:hover{
+    background:#1d4ed8;
+}
+
+.professional-btn:hover{
+    background:#157347;
+}
+
+.creative-btn:hover{
+    background:#d97706;
+}
+
+.minimal-btn:hover{
+    background:black;
+}
+
+.modern-btn:hover,
+.professional-btn:hover,
+.creative-btn:hover,
+.minimal-btn:hover{
+    transform:translateY(-3px);
+    color:white;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.template-footer{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    margin-top:35px;
+}
+
+.template-footer h4{
+    color:#2563eb;
+    font-weight:700;
+}
+
+.template-footer p{
+    color:#64748b;
+    margin-top:10px;
+}
+
+/* ==========================
+   Animation
+========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.template-container{
+    padding:25px;
+}
+
+.template-title{
+    font-size:32px;
+}
+
+.template-image{
+    height:280px;
+}
+
+}
+
+@media(max-width:768px){
+
+.template-footer{
+    text-align:center;
+}
+
+.template-footer .text-end{
+    text-align:center !important;
+    margin-top:20px;
+}
+
+.template-title{
+    font-size:28px;
+}
+
+.template-subtitle{
+    font-size:15px;
+}
+
+.template-image{
+    height:240px;
+}
+
+}

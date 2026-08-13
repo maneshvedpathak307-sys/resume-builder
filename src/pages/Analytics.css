@@ -1,0 +1,967 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.analytics-page {
+
+    min-height: 100vh;
+
+    background: #f8fafc;
+
+    padding: 30px 40px;
+
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.analytics-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+.analytics-back-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.analytics-back-btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+}
+
+
+.analytics-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #2563eb;
+
+}
+
+.analytics-title svg {
+
+    font-size: 30px;
+
+}
+
+.analytics-title h1 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================
+   Container
+========================= */
+
+.analytics-container {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+}
+
+
+.analytics-intro {
+
+    margin-bottom: 25px;
+
+}
+
+.analytics-intro h2 {
+
+    margin: 0 0 5px;
+
+    color: #1e293b;
+
+    font-size: 25px;
+
+}
+
+.analytics-intro p {
+
+    margin: 0;
+
+    color: #64748b;
+
+}
+
+
+/* =========================
+   Analytics Grid
+========================= */
+
+.analytics-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.analytics-card {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.07);
+
+    transition: .3s;
+
+}
+
+.analytics-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.12);
+
+}
+
+
+.analytics-card-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+
+}
+
+
+.analytics-card h3 {
+
+    margin: 0;
+
+    color: #1e293b;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+.analytics-card p {
+
+    margin: 2px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   Icon Colors
+========================= */
+
+.analytics-card-icon.blue {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+}
+
+.analytics-card-icon.green {
+
+    background: #f0fdf4;
+
+    color: #16a34a;
+
+}
+
+.analytics-card-icon.purple {
+
+    background: #faf5ff;
+
+    color: #9333ea;
+
+}
+
+.analytics-card-icon.orange {
+
+    background: #fff7ed;
+
+    color: #f97316;
+
+}
+
+.analytics-card-icon.cyan {
+
+    background: #ecfeff;
+
+    color: #0891b2;
+
+}
+
+.analytics-card-icon.red {
+
+    background: #fef2f2;
+
+    color: #dc2626;
+
+}
+
+.analytics-card-icon.yellow {
+
+    background: #fefce8;
+
+    color: #ca8a04;
+
+}
+
+.analytics-card-icon.teal {
+
+    background: #f0fdfa;
+
+    color: #0f766e;
+
+}
+
+
+/* =========================
+   Progress
+========================= */
+
+.progress-section {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    margin-top: 25px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.07);
+
+}
+
+
+.progress-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+}
+
+
+.progress-header h2 {
+
+    margin: 0 0 5px;
+
+    color: #1e293b;
+
+    font-size: 21px;
+
+}
+
+.progress-header p {
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+.progress-header strong {
+
+    font-size: 28px;
+
+    color: #2563eb;
+
+}
+
+
+.progress-track {
+
+    width: 100%;
+
+    height: 14px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-fill {
+
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+    transition: width .6s ease;
+
+}
+
+
+.progress-footer {
+
+    margin-top: 12px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   Section Analysis
+========================= */
+
+.section-analysis {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    margin-top: 25px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.07);
+
+}
+
+
+.section-analysis h2 {
+
+    margin: 0 0 20px;
+
+    color: #1e293b;
+
+    font-size: 21px;
+
+}
+
+
+.section-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.section-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+
+}
+
+
+.section-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.section-row span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+}
+
+
+.section-row span svg {
+
+    color: #2563eb;
+
+}
+
+
+.section-row strong {
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+}
+
+
+/* =========================
+   Loading
+========================= */
+
+.analytics-loading {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #2563eb;
+
+}
+
+.analytics-loading svg {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+.analytics-loading h2 {
+
+    color: #64748b;
+
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1000px) {
+
+    .analytics-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .analytics-page {
+
+        padding: 20px;
+
+    }
+
+    .analytics-header {
+
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+
+        gap: 20px;
+
+    }
+
+    .analytics-title {
+
+        justify-content: center;
+
+    }
+
+    .analytics-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .progress-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+}
+
+
+
+
+/* =========================
+   Resume Analytics
+========================= */
+
+.resume-analytics-section {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    margin-top: 30px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.07);
+
+}
+
+.resume-analytics-section h2 {
+
+    margin: 0;
+
+    color: #1e293b;
+
+    font-size: 24px;
+
+}
+
+.resume-analytics-subtitle {
+
+    color: #64748b;
+
+    margin-top: 5px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Resume Cards */
+
+.resume-analytics-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.resume-analytics-card {
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    transition: .3s;
+
+}
+
+
+.resume-analytics-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.10);
+
+}
+
+
+/* Card Header */
+
+.resume-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+}
+
+
+.resume-card-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+}
+
+
+.resume-card-header h3 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #1e293b;
+
+}
+
+
+.resume-card-header p {
+
+    margin: 3px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* Completion */
+
+.resume-completion {
+
+    padding: 20px 0;
+
+}
+
+
+.completion-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+
+}
+
+
+.completion-header span {
+
+    color: #475569;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+
+.completion-header strong {
+
+    color: #2563eb;
+
+    font-size: 18px;
+
+}
+
+
+.resume-progress-track {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.resume-progress-fill {
+
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+    transition: width .6s ease;
+
+}
+
+
+/* Section Stats */
+
+.resume-section-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.resume-section-stats > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+
+}
+
+
+.resume-section-stats svg {
+
+    color: #2563eb;
+
+    font-size: 15px;
+
+}
+
+
+.resume-section-stats span {
+
+    flex: 1;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+}
+
+
+.resume-section-stats strong {
+
+    color: #1e293b;
+
+    font-size: 14px;
+
+}
+
+
+/* View Resume */
+
+.view-resume-btn {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.view-resume-btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* No Resume */
+
+.no-resumes {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #64748b;
+
+}
+
+
+.no-resumes svg {
+
+    font-size: 50px;
+
+    color: #2563eb;
+
+    margin-bottom: 15px;
+
+}
+
+
+.no-resumes h3 {
+
+    color: #1e293b;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .resume-analytics-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .resume-analytics-section {
+
+        padding: 20px;
+
+    }
+
+    .resume-section-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
