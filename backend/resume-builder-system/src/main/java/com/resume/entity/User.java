@@ -29,7 +29,9 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String fullName, String email, String phone, String password, String role) {
+    public User(Long id, String fullName, String email,
+                String phone, String password, String role) {
+
         this.id = id;
         this.fullName = fullName;
         this.email = email;
@@ -70,7 +72,6 @@ public class User {
         this.phone = phone;
     }
 
-    @JsonIgnore
     public String getPassword() {
         return password;
     }

@@ -1,5 +1,6 @@
 package com.resume.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,9 +15,10 @@ public class Language {
 
     private String proficiency;
 
-    @ManyToOne
-    @JoinColumn(name = "personal_id")
-    private Personal personal;
+   @ManyToOne
+   @JoinColumn(name = "personal_id")
+   @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+   private Personal personal;
 
     public Language() {
     }
