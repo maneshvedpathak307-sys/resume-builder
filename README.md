@@ -103,6 +103,7 @@ Users can create a resume step by step:
 - Multiple Languages
 
 ### 🎨 Resume Templates
+
 The application provides multiple resume templates:
 
 - Modern
@@ -119,7 +120,7 @@ The application provides multiple resume templates:
 
 ---
 
-# 🔄 Application Flow
+## 🔄 Application Flow
 
 The complete application flow is:
 
@@ -151,47 +152,3 @@ Template Selection
 Resume Preview
    ↓
 Download PDF
-
-## 📸 Project Screenshots
-
-### 1. Home Page
-![Home Page](screenshots/01-home-page.png)
-
-### 2. Login Page
-![Login Page](screenshots/02-login-page.png)
-
-### 3. Create Account
-![Create Account](screenshots/03-create-account.png)
-
-### 4. Forgot Password
-![Forgot Password](screenshots/04-forgot-password.png)
-
-### 5. Dashboard
-![Dashboard](screenshots/05-dashboard.png)
-
-### 6. Personal Information
-![Personal Information](screenshots/06-personal-information.png)
-
-### 7. Education
-![Education](screenshots/07-education.png)
-
-### 8. Work Experience
-![Work Experience](screenshots/08-work-experience.png)
-
-### 9. Skills
-![Skills](screenshots/09-skills.png)
-
-### 10. Projects
-![Projects](screenshots/10-projects.png)
-
-### 11. Certifications
-![Certifications](screenshots/11-certifications.png)
-
-### 12. Languages
-![Languages](screenshots/12-languages.png)
-
-### 13. Template Selection
-![Template Selection](screenshots/13-template-selection.png)
-
-### 14. Resume Preview
-![Resume Preview](screenshots/14-resume-preview.png)
