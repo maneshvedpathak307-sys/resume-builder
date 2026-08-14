@@ -34,30 +34,25 @@ public class SecurityConfig {
             HttpSecurity http) throws Exception {
 
         http
+
                 .csrf(csrf -> csrf.disable())
 
                 .cors(Customizer.withDefaults())
 
                 .authorizeHttpRequests(auth -> auth
 
-                        // Authentication APIs
+                        // Login/Register don't need JWT
                         .requestMatchers(
                                 "/api/auth/**"
                         ).permitAll()
 
-                        // Forgot password APIs
-                        .requestMatchers(
-                                "/api/forgot-password/**"
-                        ).permitAll()
-
-                        // Preflight requests
-                        .requestMatchers(
-                                org.springframework.http.HttpMethod.OPTIONS,
-                                "/**"
-                        ).permitAll()
-
                         // Everything else requires JWT
-                        .anyRequest().authenticated()
+                        .requestMatchers(
+                                "/api/**"
+                        ).authenticated()
+
+                        .anyRequest()
+                        .permitAll()
                 )
 
                 .addFilterBefore(
