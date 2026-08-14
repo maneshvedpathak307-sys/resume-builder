@@ -173,13 +173,13 @@ Download PDF
 ![Dashboard](screenshots/05-dashboard.png)
 
 ### 6. Personal Information
-![Personal Information](screenshots/06-personal-information.png)
+![Personal Information](screenshots/06-personal.png)
 
 ### 7. Education
 ![Education](screenshots/07-education.png)
 
 ### 8. Work Experience
-![Work Experience](screenshots/08-work-experience.png)
+![Work Experience](screenshots/08-experience.png)
 
 ### 9. Skills
 ![Skills](screenshots/09-skills.png)
@@ -194,7 +194,7 @@ Download PDF
 ![Languages](screenshots/12-languages.png)
 
 ### 13. Template Selection
-![Template Selection](screenshots/13-template-selection.png)
+![Template Selection](screenshots/13-template.png)
 
 ### 14. Resume Preview
-![Resume Preview](screenshots/14-resume-preview.png)
+![Resume Preview](screenshots/14-preview.png)
