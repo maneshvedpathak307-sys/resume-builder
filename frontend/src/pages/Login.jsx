@@ -84,7 +84,7 @@ function Login() {
 
       }
 
-      navigate("/dashboard");
+      navigate("/dashboard", { replace: true });
 
     } catch (error) {
 

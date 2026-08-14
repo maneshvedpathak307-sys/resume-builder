@@ -285,7 +285,7 @@ function Dashboard() {
     );
 
 
-    navigate("/login");
+    navigate("/", { replace: true });
 
   };
 
