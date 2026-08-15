@@ -17,13 +17,16 @@ The application follows a structured 8-step resume creation process and provides
 ## ✨ Features
 
 ### 🔐 Authentication
+
 - User Registration
 - User Login
+- JWT Authentication
 - Forgot Password
 - Password Reset
 - Remember Me
 
 ### 📊 Dashboard
+
 - Total Resumes
 - Profile Completion
 - Account Status
@@ -46,6 +49,7 @@ Users can create a resume step by step:
 8. Template Selection
 
 ### 👤 Personal Information
+
 - Full Name
 - Email Address
 - Phone Number
@@ -55,6 +59,7 @@ Users can create a resume step by step:
 - Career Objective
 
 ### 🎓 Education
+
 - Degree
 - College
 - University
@@ -64,6 +69,7 @@ Users can create a resume step by step:
 - Multiple Education Entries
 
 ### 💼 Work Experience
+
 - Company Name
 - Job Title
 - Employment Type
@@ -74,6 +80,7 @@ Users can create a resume step by step:
 - Multiple Experience Entries
 
 ### 🛠 Skills
+
 - Add Multiple Skills
 - Skill Level
 - Beginner
@@ -82,6 +89,7 @@ Users can create a resume step by step:
 - Expert
 
 ### 💻 Projects
+
 - Project Title
 - Technology Used
 - GitHub Repository Link
@@ -90,6 +98,7 @@ Users can create a resume step by step:
 - Multiple Projects
 
 ### 🏆 Certifications
+
 - Certificate Name
 - Issuing Organization
 - Issue Date
@@ -98,6 +107,7 @@ Users can create a resume step by step:
 - Multiple Certifications
 
 ### 🌐 Languages
+
 - Language
 - Proficiency Level
 - Multiple Languages
@@ -112,9 +122,13 @@ The application provides multiple resume templates:
 - Minimal
 
 ### 👁 Resume Preview
+
+Users can:
+
 - Preview completed resume
 - Edit resume
 - Save resume
+- Change resume template
 - Download PDF
 - Return to Dashboard
 
@@ -152,6 +166,329 @@ Template Selection
 Resume Preview
    ↓
 Download PDF
+```
+
+---
+
+## 🏗️ Project Architecture
+
+The Resume Builder is developed using a full-stack architecture.
+
+```text
+Resume Builder
+│
+├── Frontend
+│   └── React JS
+│
+├── Backend
+│   └── Spring Boot
+│
+└── Database
+    └── MySQL
+```
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+
+- React JS
+- JavaScript
+- HTML5
+- CSS3
+- Axios
+- React Router
+
+### Backend
+
+- Java
+- Spring Boot
+- Spring Web
+- Spring Data JPA
+- Spring Security
+- JWT Authentication
+- Maven
+
+### Database
+
+- MySQL
+
+### Development Tools
+
+- Visual Studio Code
+- Eclipse / Spring Tool Suite
+- Postman
+- MySQL
+- Git
+- GitHub
+
+---
+
+## 📂 Project Structure
+
+```text
+resume-builder/
+│
+├── backend/
+│   ├── pom.xml
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   │
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │   │   └── com/resume/
+│       │   │       ├── config/
+│       │   │       ├── controller/
+│       │   │       ├── dto/
+│       │   │       ├── entity/
+│       │   │       ├── repository/
+│       │   │       ├── security/
+│       │   │       └── service/
+│       │   │
+│       │   └── resources/
+│       │       └── application.properties
+│       │
+│       └── test/
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── package-lock.json
+│
+├── screenshots/
+│   ├── 01-home-page.png
+│   ├── 02-login-page.png
+│   ├── 03-create-account.png
+│   ├── 04-forgot-password.png
+│   ├── 05-dashboard.png
+│   ├── 06-personal.png
+│   ├── 07-education.png
+│   ├── 08-experience.png
+│   ├── 09-Skills.png
+│   ├── 10-projects.png
+│   ├── 11-certifications.png
+│   ├── 12-languages.png
+│   ├── 13-template.png
+│   └── 14-preview.png
+│
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🗄️ Database
+
+The application uses MySQL to store user and resume information.
+
+### Main Tables
+
+```text
+users
+roles
+personal
+education
+experience
+skills
+projects
+certifications
+languages
+```
+
+### Database Relationship
+
+```text
+User
+ │
+ └── Personal
+       │
+       ├── Education
+       ├── Experience
+       ├── Skills
+       ├── Projects
+       ├── Certifications
+       └── Languages
+```
+
+---
+
+## 🔌 Backend API
+
+### Base URL
+
+```text
+http://localhost:8080/api
+```
+
+### Authentication
+
+```text
+POST /auth/register
+POST /auth/login
+```
+
+### Personal Information
+
+```text
+POST   /personal
+GET    /personal/user/{userId}
+GET    /personal/{id}
+PUT    /personal/{id}
+DELETE /personal/{id}
+```
+
+### Education
+
+```text
+POST   /education
+GET    /education/personal/{personalId}
+PUT    /education/{id}
+DELETE /education/{id}
+```
+
+### Work Experience
+
+```text
+POST   /experience
+GET    /experience/personal/{personalId}
+PUT    /experience/{id}
+DELETE /experience/{id}
+```
+
+### Skills
+
+```text
+POST   /skills
+GET    /skills/personal/{personalId}
+PUT    /skills/{id}
+DELETE /skills/{id}
+```
+
+### Projects
+
+```text
+POST   /projects
+GET    /projects/personal/{personalId}
+PUT    /projects/{id}
+DELETE /projects/{id}
+```
+
+### Certifications
+
+```text
+POST   /certifications
+GET    /certifications/personal/{personalId}
+PUT    /certifications/{id}
+DELETE /certifications/{id}
+```
+
+### Languages
+
+```text
+POST   /languages
+GET    /languages/personal/{personalId}
+PUT    /languages/{id}
+DELETE /languages/{id}
+```
+
+---
+
+## 🔐 JWT Authentication Flow
+
+The application uses JWT-based authentication.
+
+```text
+User Login
+    ↓
+Backend Validates Credentials
+    ↓
+JWT Token Generated
+    ↓
+Frontend Receives Token
+    ↓
+Token Stored in Frontend
+    ↓
+Token Sent With API Requests
+    ↓
+JWT Authentication Filter
+    ↓
+Backend Validates Token
+    ↓
+API Request Processed
+```
+
+---
+
+## ▶️ How to Run the Project
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-github-repository-url>
+cd resume-builder
+```
+
+### 2. Configure MySQL
+
+Create the database:
+
+```sql
+CREATE DATABASE resume_builder;
+```
+
+Configure your MySQL username, password, and database details in:
+
+```text
+backend/src/main/resources/application.properties
+```
+
+### 3. Run Backend
+
+Open a terminal in the project root:
+
+```bash
+cd backend
+```
+
+Run the Spring Boot application:
+
+```bash
+mvn spring-boot:run
+```
+
+Backend will run on:
+
+```text
+http://localhost:8080
+```
+
+### 4. Run Frontend
+
+Open another terminal:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the React application:
+
+```bash
+npm start
+```
+
+Frontend will run on:
+
+```text
+http://localhost:3000
 ```
 
 ---
@@ -213,3 +550,32 @@ Download PDF
 ### 14. Resume Preview
 
 ![Resume Preview](screenshots/14-preview.png)
+
+---
+
+## 🎯 Future Enhancements
+
+- Multiple resumes per user
+- Resume version management
+- Additional professional templates
+- AI-powered resume suggestions
+- ATS score checking
+- Public resume sharing
+- Cloud storage
+- Email resume functionality
+
+---
+
+## 👨‍💻 Author
+
+**Manesh Vedpathak**
+
+Full Stack Resume Builder
+
+**React JS + Spring Boot + MySQL**
+
+---
+
+## ⭐ Project
+
+If you find this project useful, consider giving it a star on GitHub.
